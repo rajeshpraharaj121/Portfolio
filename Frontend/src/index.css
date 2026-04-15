@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white overflow-x-hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-black/40 backdrop-blur-md border border-white/10 shadow-[0_0_15px_rgba(0,0,0,0.5)];
+  }
+  
+  .glass-card {
+    @apply bg-[#0d0d0d]/80 backdrop-blur-lg border border-[#333] transition-all duration-300;
+  }
+
+  .glass-card:hover {
+    @apply border-[#00f3ff] shadow-[0_0_20px_rgba(0,243,255,0.2)];
+  }
+
+  .neon-text-blue {
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.8), 0 0 20px rgba(0, 243, 255, 0.4);
+    @apply text-[#00f3ff];
+  }
+
+  .neon-text-purple {
+    text-shadow: 0 0 10px rgba(176, 38, 255, 0.8), 0 0 20px rgba(176, 38, 255, 0.4);
+    @apply text-[#b026ff];
+  }
+
+  .cyber-button {
+    @apply overflow-hidden relative bg-transparent border border-[#00f3ff] text-[#00f3ff] font-bold py-2 px-6 rounded;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+  }
+  
+  .cyber-button::before {
+    content: '';
+    @apply absolute top-0 left-[-100%] w-full h-full bg-[#00f3ff]/20 z-[-1] transition-all duration-300 ease-in-out;
+  }
+  
+  .cyber-button:hover::before {
+    @apply left-0;
+  }
+  
+  .cyber-button:hover {
+    @apply shadow-[0_0_15px_rgba(0,243,255,0.6)];
+  }
+
+  /* Grid Background */
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+}
