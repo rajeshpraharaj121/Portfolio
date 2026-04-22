@@ -100,6 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
             mouse.y = e.clientY;
         });
 
+        document.addEventListener('touchmove', (e) => {
+            if(e.touches.length > 0) {
+                mouse.x = e.touches[0].clientX;
+                mouse.y = e.touches[0].clientY;
+            }
+        });
+
+        document.addEventListener('touchend', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
         class Particle {
             constructor(x, y, dx, dy, size, color) {
                 this.x = x;
@@ -144,6 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             this.y -= dy/20;
                         }
                     }
+                } else {
+                    // Return to base when no mouse/touch
+                    if (this.x !== this.baseX) {
+                        this.x -= (this.x - this.baseX)/20;
+                    }
+                    if (this.y !== this.baseY) {
+                        this.y -= (this.y - this.baseY)/20;
+                    }
                 }
                 
                 this.x += this.dx;
@@ -154,7 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function initParticles() {
             particles = [];
-            let numberOfParticles = (width * height) / 9000;
+            // Increase density slightly for mobile
+            let numberOfParticles = (width * height) / 6000;
             for (let i = 0; i < numberOfParticles; i++) {
                 let size = (Math.random() * 2) + 1;
                 let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);

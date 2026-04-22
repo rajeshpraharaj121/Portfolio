@@ -629,6 +629,15 @@ body {
     .hero-title {
         font-size: 5rem;
     }
+    .cursor-glow {
+        display: none !important;
+    }
+    body, a, button, .btn-primary, .btn-secondary, .contact-link {
+        cursor: auto !important;
+    }
+    .scroll-indicator {
+        bottom: 80px;
+    }
 }
 
 @media (max-width: 600px) {
