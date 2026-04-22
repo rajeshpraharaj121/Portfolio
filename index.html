@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajesh Praharaj | Data Analyst & Photographer</title>
+    <meta name="description" content="Portfolio of Rajesh Praharaj - Python-focused Data Analyst, aspiring Data Scientist, and part-time Photographer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="cursor-glow"></div>
+
+    <nav class="navbar">
+        <div class="logo">RP.</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#photography">Photography</a></li>
+            <li><a href="#contact" class="btn-outline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-bg" style="background-image: url('images/hero_bg.png');"></div>
+        <div class="hero-content">
+            <h1 class="hero-title glitch" id="hero-name" data-text="RAJESH PRAHARAJ">RAJESH PRAHARAJ</h1>
+            <p class="hero-subtitle hidden-subtitle" id="hero-subtitle">DATA ANALYST <span class="neon-divider">|</span> ASPIRING DATA SCIENTIST <span class="neon-divider">|</span> CAPTURING AESTHETIC VISUALS</p>
+            
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">Explore Data</a>
+                <a href="#photography" class="btn-secondary">View Gallery</a>
+            </div>
+        </div>
+        
+        <!-- Interactive Canvas Background -->
+        <canvas id="hero-canvas"></canvas>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">ABOUT ME<span class="neon-dot">.</span></h2>
+            <div class="about-content">
+                <p class="lead-text">
+                    I am a Python-focused Data Analyst driven by the desire to extract meaningful stories from complex datasets. 
+                </p>
+                <p>
+                    Currently pursuing my B.Tech in CSE (Artificial Intelligence), I specialize in Exploratory Data Analysis, statistical modeling, and building scalable data pipelines. When I'm not writing SQL queries or training machine learning models, I'm behind the lens as a part-time photographer, capturing cinematic and moody visuals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">SKILLS & ARSENAL<span class="neon-dot">.</span></h2>
+            <div class="bento-grid skills-grid">
+                <div class="bento-item glow-cyan">
+                    <h3>Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="bento-item glow-purple span-2">
+                    <h3>Data & Machine Learning</h3>
+                    <ul class="skill-list horizontal">
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Scikit-Learn</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
+                        <li>EDA</li>
+                        <li>Feature Engineering</li>
+                    </ul>
+                </div>
+                <div class="bento-item glow-pink">
+                    <h3>Tools</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Jupyter</li>
+                        <li>PowerBI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">FEATURED DATA<span class="neon-dot">.</span></h2>
+            <div class="bento-grid projects-grid">
+                
+                <div class="bento-card large-card glow-blue">
+                    <div class="card-content">
+                        <span class="tag">Machine Learning</span>
+                        <h3>Customer Sales Analysis Dashboard</h3>
+                        <p>End-to-end KPI dashboard utilizing Linear Regression for sales forecasting. Processed complex retail datasets to identify purchasing trends.</p>
+                        <a href="#" class="read-more">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="bento-card glow-purple">
+                    <div class="card-content">
+                        <span class="tag">Analytics</span>
+                        <h3>HR Employee Attrition</h3>
+                        <p>Comprehensive visualizations determining key factors of employee turnover, resulting in actionable retention strategies.</p>
+                        <a href="#" class="read-more">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="bento-card glow-cyan">
+                    <div class="card-content">
+                        <span class="tag">NLP / AI</span>
+                        <h3>AI Resume Parser</h3>
+                        <p>Developed a Natural Language Processing tool designed to automatically extract key entities and skills from PDF resumes.</p>
+                        <a href="#" class="read-more">View Details →</a>
+                    </div>
+                </div>
+
+                <div class="bento-card wide-card glow-pink">
+                    <div class="card-content">
+                        <span class="tag">EDA</span>
+                        <h3>FIFA Player Value & Salary Analysis</h3>
+                        <p>Deep dive into player statistics to identify valuation trends, correlations between performance metrics, and salary distributions.</p>
+                        <a href="#" class="read-more">View Details →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="photography" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">VISUALS<span class="neon-dot">.</span></h2>
+            <p class="section-subtitle">A glimpse through my lens. Cinematic, dark, and aesthetic.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/photo_1.png" alt="Cyberpunk Street Photography">
+                    <div class="overlay">Cyberpunk Street</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo_2.png" alt="Neon Silhouette Portrait">
+                    <div class="overlay">Neon Portrait</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/photo_3.png" alt="Dark Architectural Photography">
+                    <div class="overlay">Brutalist Architecture</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container contact-container">
+            <h2 class="section-title">INITIALIZE CONTACT<span class="neon-dot">.</span></h2>
+            <div class="contact-info">
+                <a href="mailto:rajeshpraharaj57@gmail.com" class="contact-link">
+                    <span class="icon">✉</span> rajeshpraharaj57@gmail.com
+                </a>
+                <a href="tel:+918456087978" class="contact-link">
+                    <span class="icon">✆</span> +91-8456087978
+                </a>
+                <a href="https://linkedin.com/in/rajesh-praharaj" target="_blank" class="contact-link">
+                    <span class="icon">in</span> linkedin.com/in/rajesh-praharaj
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Rajesh Praharaj. Built with a dark futuristic aesthetic.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
